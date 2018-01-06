@@ -1,11 +1,11 @@
 import urllib
-import RPi.GPIO as GPIO                    #Import GPIO library
+import RPi.GPIO as GPIO                   
 import time
-import requests                                #Import time library
-GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
+import requests                               
+GPIO.setmode(GPIO.BCM)               
 
-TRIG = 20                                  #Associate pin 23 to TRIG
-ECHO = 21                                  #Associate pin 24 to ECHO
+TRIG = 20                                 
+ECHO = 21                                  
 
 print "Setting Up the Sensor"
 print "Bin Size Determination In Progress"
