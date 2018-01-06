@@ -32,6 +32,15 @@
  	 -o-background-size: cover;
   	background-size: cover;
 	}
+
+
+
+	.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 15px;
+	}
 		</style>
 
 
@@ -51,6 +60,7 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
+
 </script>
 
 
@@ -62,7 +72,7 @@ function checkTime(i) {
 <body onload="startTime()">
 	<center>
 	<h2>CVR E-Bins</h2>
-	<marquee id="txt">Welcome</marquee></br></br>
+	<div id="txt" class="topright"></div></br></br>
 	
 	<!--<div class="avatar-container p-<?php
 		$rs=mysql_query('select *from vamshi_team1db.table1 ORDER BY date DESC');
