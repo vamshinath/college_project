@@ -1,0 +1,27 @@
+[05-Jan-2018 23:43:35 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:46:18 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:46:27 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:46:31 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:48:38 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:48:40 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:49:19 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:49:21 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:49:29 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:49:44 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:49:46 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:49:54 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:50:24 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:50:27 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:51:23 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:51:25 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:51:27 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/vamshi/public_html/cvr/index.php on line 3
+[05-Jan-2018 23:52:05 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:52:08 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:52:56 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:52:58 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:53:00 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:57:13 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:57:18 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:57:29 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[05-Jan-2018 23:57:31 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/vamshi/public_html/cvr/index.php on line 2
+[06-Jan-2018 10:41:43 UTC] PHP Parse error:  syntax error, unexpected '$timee' (T_VARIABLE) in /home/vamshi/public_html/cvr/index.php on line 13
