@@ -1,11 +1,11 @@
 import urllib
-import RPi.GPIO as GPIO                   
+import RPi.GPIO as GPIO                    #Import GPIO library
 import time
-import requests                               
-GPIO.setmode(GPIO.BCM)               
+import requests                                #Import time library
+GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
 
-TRIG = 20                                 
-ECHO = 21                                  
+TRIG = 20                                  #Associate pin 23 to TRIG
+ECHO = 21                                  #Associate pin 24 to ECHO
 
 print "Setting Up the Sensor"
 print "Bin Size Determination In Progress"
@@ -62,7 +62,7 @@ def main():
 		if filled_percent >= 0.0 and filled_percent <= 100:
 			print "filled_percent:"+str(filled_percent)
 			if abs(filled_percent-pre_value) > 5:
-				page=requests.get("http://apple.heliohost.org/upload.php?percentage="+str(filled_percent)+"&id=PGB")
+				page=requests.get("http://apple.heliohost.org/uploadcvr.php?percentage="+str(filled_percent)+"&id=PGB")
 				if page.status_code == 200:
 					print "data pushed to server successfuly"
 				pre_value=filled_percent
