@@ -2,12 +2,13 @@
 #define echoPin 2 // Echo Pin
 #define trigPin 0 // Trigger Pin
 
+
 const char* ssid = "LakshmiNelayam"; //replace this with your WiFi network name
 const char* password = "Mannem0123"; //replace this with your WiFi network password
-const char* hostGet = "apple.heliohost.org"; 
 
-float duration, distance; // Duration used to calculate distance
-float bindepth=1;
+ 
+long duration, distance; // Duration used to calculate distance
+long bindepth=1;
 void setup()
 {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -25,28 +26,23 @@ void setup()
   Serial.println("success!");
   Serial.print("IP Address is: ");
   Serial.println(WiFi.localIP());
- pinMode(trigPin, OUTPUT);
- pinMode(echoPin, INPUT);
- Serial.println("esp-ultrasoonsensor2017.ino");
- delay(10000);
- 
- while(1){
-   float v1=level();
-   delay(1500);
-  float v2=level();
-  if (abs(v1-v2) < 3){
-    bindepth+=(v1+v2)/2;
-    return ;
-  }
-   
- }
+pinMode(trigPin, OUTPUT);
+pinMode(echoPin, INPUT);
+Serial.println("esp-ultrasoonsensor2017.ino");
+delay(10000);
+bindepth=level()+1;
 }
 
-void postData2(String urlGet)
-{
-  WiFiClient clientGet;
+const char* hostGet = "apple.heliohost.org"; 
+
+
+void postData(String id,float per) {
+
+   WiFiClient clientGet;
    const int httpGetPort = 80;
- Serial.println(urlGet);
+   //the path and file to send the data to:
+   String urlGet = "/uploadcvr.php?id="+id+"&percentage="+per;
+   Serial.println(urlGet);
       Serial.print(">>> Pushing data to: ");
       Serial.println(hostGet);
       
@@ -85,23 +81,6 @@ void postData2(String urlGet)
           
       clientGet.stop();
 
- 
- 
- 
- 
- 
-}
-
-void postData(String id,float per) {
-
-   WiFiClient clientGet;
-   const int httpGetPort = 80;
-   //the path and file to send the data to:
-   String urlGet = "/uploadcvr.php?id="+id+"&percentage="+per;
-   poatData2(urlGet);
-   if (per>74)
-      postData2("/sendsms.php?rcv=9603559140&msg=BIN+FULL :"+per+" %");
-   
 }
  
 float level()
@@ -123,13 +102,9 @@ return distance;
 void loop()
 {
   
-  float v1=level();
-  delay(1500);
-  float v2=level();
- if(abs(v1-v2)<3){ 
-  postData("PGB",100-(val*100)/bindepth);
+  float val=level();
+  postData("CAN",100-(val*100)/bindepth);
   delay(25000);
- }
 }
 
 
