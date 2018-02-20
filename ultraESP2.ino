@@ -1,12 +1,13 @@
 #include <ESP8266WiFi.h>
+
 #define echoPin 2 // Echo Pin
 #define trigPin 0 // Trigger Pin
 
-
 const char* ssid = "LakshmiNelayam"; //replace this with your WiFi network name
 const char* password = "Mannem0123"; //replace this with your WiFi network password
-
- 
+IPAddress ip(192,168,0,123);
+IPAddress gt(192,168,0,1);
+IPAddress sb(255,255,255,0);
 long duration, distance; // Duration used to calculate distance
 long bindepth=1;
 void setup()
@@ -14,6 +15,7 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(115200);
   WiFi.begin(ssid, password);
+  //WiFi.config(ip,gt,sb);
 
   Serial.println();
   Serial.print("Connecting");
@@ -22,7 +24,7 @@ void setup()
     delay(500);
     Serial.print(".");
   }
-
+  WiFi.config(ip,gt,sb);
   Serial.println("success!");
   Serial.print("IP Address is: ");
   Serial.println(WiFi.localIP());
@@ -100,10 +102,10 @@ return distance;
 //Delay 50ms before next reading.
 }
 void loop()
-{
+{  
   
   float val=level();
-  postData("CAN",100-(val*100)/bindepth);
+  postData("CSE",100-(val*100)/bindepth);
   delay(25000);
 }
 
